@@ -1,0 +1,60 @@
+.products .pro-container{
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    margin: 50px 30px;
+}
+
+.products{
+    text-align: center;
+}
+
+.products .pro{
+    width: 20%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #abceb0;
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.products .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    transform: scale(1.05)
+}
+
+.products .pro img{
+    object-fit: cover;
+    height: 300px;
+    width: 225px;
+    border-radius: 20px;
+    background: #e3e3e3;
+}
+
+.des{
+    text-align: start;
+    padding: 10px 0;
+}
+.item-button{
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+    background: #febd69;
+}
+.des span{
+    font-weight: 600;
+    color: gray;
+}
+
+.des h5{
+    font-size: 16px;
+}
+
+.des h4{
+    text-align: end;
+}

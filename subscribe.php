@@ -34,7 +34,7 @@ else if(isset($_POST['business'])){
     window.location.href='home.php';
     </script>";    
 }
-else if(isset($_POST['sports'])){
+else if(isset($_POST['all'])){
     $userid=$_SESSION['UserLoginId'];
     $query = "UPDATE user SET subscriber='4' WHERE email='$_SESSION[UserLoginId]'";
     

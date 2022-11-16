@@ -70,31 +70,31 @@ if(!isset($_SESSION['UserLoginId']))
                 </div>
                 <div class="name-input">
                     <p>Your name</p>
-                    <input required name="name" type="text" placeholder="<?php echo $row['name'];?>">
+                    <input name="name" type="text" placeholder="<?php echo $row['name'];?>">
                 </div>
                 <div class="email-input">
                     <p>Number</p>
-                    <input name="number" required type="text" placeholder="<?php echo $row['number'];?>">
+                    <input name="number" type="text" placeholder="<?php echo $row['number'];?>">
                 </div>
                 <div class="email-input">
                     <p>House no./Flat name</p>
-                    <input name="house" required type="text" placeholder="<?php echo $row['house'];?>">
+                    <input name="house" type="text" placeholder="<?php echo $row['house'];?>">
                 </div>
                 <div class="email-input">
                     <p>Street name</p>
-                    <input name="street" required type="text" placeholder="<?php echo $row['street'];?>">
+                    <input name="street" type="text" placeholder="<?php echo $row['street'];?>">
                 </div>
                 <div class="email-input">
                     <p>City</p>
-                    <input name="city" required type="text" placeholder="<?php echo $row['city'];?>">
+                    <input name="city" type="text" placeholder="<?php echo $row['city'];?>">
                 </div>
                 <div class="email-input">
                     <p>State</p>
-                    <input name="state" required type="text" placeholder="<?php echo $row['state'];?>">
+                    <input name="state" type="text" placeholder="<?php echo $row['state'];?>">
                 </div>
                 <div class="password-input">
                     <p>Pin</p>
-                    <input name="pin" required type="number" placeholder="<?php echo $row['pin'];?>">
+                    <input name="pin" type="number" placeholder="<?php echo $row['pin'];?>">
                 </div>
                 <div class="login-bttn">
                     <button class="login-btn" name="update">Continue</button>

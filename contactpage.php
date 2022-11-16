@@ -95,16 +95,16 @@ if(!isset($_SESSION['UserLoginId']))
                     <h6>at Delhi</h6>
                 </div></a>
             </div>
-            <form method="post" id="contact" action="contactpage.php">
+            <form method="post" id="contact" action="contactpaage.php">
                 <div class="input-wrap">
-                    <input type="text" name="name" autocomplete="off" placeholder="Your Name *" required>
-                    <input type="email" name="email" autocomplete="off" placeholder="Your Email *" required>
+                    <input type="text" name="name" autocomplete="off" placeholder="Your Name *"  value="<?php echo $row['name'];?>" readonly>
+                    <input type="email" name="email" autocomplete="off" placeholder="Your Email *" value="<?php echo $row['email'];?>" readonly>
                 </div>
                 <div class="input-wrap-2">
-                    <input type="text" name="subject" autocomplete="off" placeholder="Your Subject..." required>
+                    <input type="text" name="concern" autocomplete="off" placeholder="Your Subject..." required>
                     <textarea name="message" autocomplete="off" id="" cols="30" rows="10" placeholder="Your Message." required></textarea>
                     <div class="btn-wrapper">
-                        <button type="submit" class="btn1" name="contact">SUBMIT</button>
+                        <button class="btn1" type="submit">SUBMIT</button>
                     </div>
                 </div>
             </form>

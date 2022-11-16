@@ -22,6 +22,7 @@ if(!isset($_SESSION['UserLoginId']))
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/homeContain.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/nosubscriber.css">
     <title>Document</title>
 </head>
 <body>
@@ -69,107 +70,84 @@ if(!isset($_SESSION['UserLoginId']))
       <p class="topbar-state"><?php echo $row['state'];?>, </p>
       <p class="topbar-pin"><?php echo $row['pin'];?></p>
     </div>
-    <section class="products" id="shirts">
-        <h2>All Products</h2>
-        <p>Shirts</p>
-        <div class="pro-container">
-            <div class="pro">
-            <img src="/img/shirts1.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
-        </div>
 
-        <div class="pro">
-            <img src="/img/shirts3.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
-        </div>
 
-        <div class="pro">
-            <img src="/img/shirts3.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
+    <?php if ($row['subscriber']==0) { ?> 
+    <div class="no-subscriber">
+      <div class="main-card">
+        <div class="card">
+          <img src="img/technology.jpg" alt="">
+          <div class="card-text">
+            <h2>Tech</h2>
+            <p>Get access to exclusive articles of latest technology and its related stuffs.</p>
+          </div>
+          <div class="card-stats">
+            <form class="stats-btn" action="subscribe.php" id="tech" method="post">
+              <button name="tech">Subscribe</button>
+            </form>
+          </div>
         </div>
+        <div class="card">
+          <img src="img/sports.jpg" alt="">
+          <div class="card-text">
+            <h2>Sports</h2>
+            <p>Get access to exclusive sports articles and its related stuffs.</p>
+          </div>
+          <div class="card-stats">
+            <form class="stats-btn" action="subscribe.php" id="sports" method="post">
+              <button name="sports">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/business.jpg" alt="">
+          <div class="card-text">
+            <h2>Business</h2>
+            <p>Get access to exclusive articles of Business related stuffs.</p>
+          </div>
+          <div class="card-stats">
+            <form class="stats-btn" action="subscribe.php" id="bussiness" method="post">
+              <button name="business">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/global.jpg" alt="">
+          <div class="card-text">
+            <h2>Gold Plan</h2>
+            <p>Get access to all exclusive articles at once.</p>
+          </div>
+          <div class="card-stats">
+            <form class="stats-btn" action="subscribe.php" id="all" method="post">
+              <button name="all">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php }
+    else if ($row['subscriber']==1) { ?>
+    <div>
+      Welcome to Tech world.
+    </div>
+    <?php }
+    else if ($row['subscriber']==2) { ?>
+    <div>
+      Welcome to Sports world.
+    </div>
+    <?php }
+    else if ($row['subscriber']==3) { ?>
+    <div>
+      Welcome to Business world.
+    </div>
+    <?php }
+    else if ($row['subscriber']==4) { ?>
+    <div>
+      Welcome to Omazon world.
+    </div>
+    <?php } ?>
+    
 
-        <div class="pro">
-            <img src="/img/shirts1.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="pro">
-            <img src="/img/shirts1.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="pro">
-            <img src="/img/shirts1.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="pro">
-            <img src="/img/shirts1.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="pro">
-            <img src="/img/shirts3.png" alt="">
-            <div class="des">
-                <span>Company</span>
-                <h5>Red Check Shirt</h5>
-                <div>
-                  <button class="item-button">Add to Cart</button>
-                  <h4>450 RS</h4>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
     <?php
     if(isset($_POST['Logout']))
     {
